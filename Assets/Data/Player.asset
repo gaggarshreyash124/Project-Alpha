@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b6460e92d06d04eb47b1821a06ab7d, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  MaxHealth: 100
+  CurrentHealth: 100
+  Defense: 10
+  TrueDefense: 5
+  MoveSpeed: 5
+  JumpForce: 10
+  DashCooldown: 2
+  DashDistance: 0.2
+  AttackDamage: 25
+  AttackRange: 1.5
+  AttackSpeed: 1
+  DefensePenetration: 0
+  KnockbackResistance: 0.5
+  KnockbackForce: 10
+  HealthRegenRate: 1
+  ArcanaMax: 50
+  CurrentArcana: 50
+  ArcanaRegenRate: 0.5
+  CriticalHitChance: 0.1
+  CriticalHitMultiplier: 1.5
