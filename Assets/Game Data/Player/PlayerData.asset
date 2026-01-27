@@ -15,20 +15,10 @@ MonoBehaviour:
   MoveInput: {x: 0, y: 0}
   JumpInput: 0
   JumpInputHoldTime: 0
-  BufferTime: 0
-  BufferDuration: 0.2
   MoveSpeed: 24
-  Acceleration: 120
-  GroundDeceleration: 60
-  AirDeceleration: 30
-  GroundingForce: -1.5
-  GrounderDistance: 0.05
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  JumpPower: 35
-  MaxFallSpeed: 40
-  FallAcceleration: 110
-  JumpEndEarlyGravityModifier: 3
-  CoyoteTime: 0.15
+  JumpPower: 27
+  CoyoteTime: 0.13
   JumpBuffer: 0.2
