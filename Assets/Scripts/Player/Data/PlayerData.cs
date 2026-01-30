@@ -3,11 +3,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerData", menuName = "Scriptable Objects/PlayerData")]
 public class PlayerData : ScriptableObject
 {
+    [Header("Stats")]
+    public float MaxHealth = 100;
+    public float currentHealth;
+    public float Attack;
+    
     [Header("InputHandler Data")]
-    public Vector2 MoveInput;
-    public bool JumpInput = false;
-    public float JumpInputHoldTime;
-
+    
     [Header("Movement Variables")] 
     public float MoveSpeed = 14;
     public float JumpPower = 36;
@@ -24,6 +26,16 @@ public class PlayerData : ScriptableObject
     //Buffer
     public bool canbuffer;
     public float JumpBuffer = .2f;
+    
+
+    [Header("Flip Components")]
+    public bool isFacingRight;
+    public float fD = 1;
+
+    [Header("Dash Components")]
+    public float DashDuration;
+    public bool CanDash;
+    public float DashCooldown;
 
     [Header("Masks")]
     public bool WallJumpMask;

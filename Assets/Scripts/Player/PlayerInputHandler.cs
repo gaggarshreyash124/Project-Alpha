@@ -5,8 +5,11 @@ public class PlayerInputHandler : MonoBehaviour
     public PlayerControls Controls;
     public PlayerData playerData;
     public float JumpPressedTime;
-    public bool jumpToConsume;  
+    public Vector2 MoveInput;
+    public bool JumpInput = false;
     public bool jumpReleasedEarly;
+    public float JumpInputHoldTime;
+
 
     public bool DashInput;
     void Awake()
@@ -32,12 +35,12 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (context.performed)
         {
-            playerData.MoveInput = context.ReadValue<Vector2>();
-            Debug.Log("Move Input: " + playerData.MoveInput);
+            MoveInput = context.ReadValue<Vector2>();
+            Debug.Log("Move Input: " + MoveInput);
         }
         if (context.canceled)
         {
-            playerData.MoveInput = Vector2.zero;
+            MoveInput = Vector2.zero;
             Debug.Log("Move Input Canceled");
         }
     }
@@ -46,21 +49,18 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.started)
         {
             JumpPressedTime = Time.time;
-            playerData.JumpInput = true;
+            JumpInput = true;
+            Debug.Log(JumpInput);
             Debug.Log("Jump Started");
-            
         }
         else if (context.performed)
         {
-            
-            
-            Debug.Log("Jump Performed");
-            
+            JumpInput = false;
+            jumpReleasedEarly = true;
         }
         else if (context.canceled)
         {
-            playerData.JumpInput = false;
-            Debug.Log("Jump Canceled");
+            JumpInput = false;
         }
     }
 

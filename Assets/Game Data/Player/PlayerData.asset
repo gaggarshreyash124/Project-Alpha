@@ -12,13 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc948441ed73df468f21f4a2fbe9bd9, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
+  MaxHealth: 100
+  currentHealth: 100
+  Attack: 0
   MoveInput: {x: 0, y: 0}
   JumpInput: 0
   JumpInputHoldTime: 0
   MoveSpeed: 24
+  JumpPower: 27
+  DashSpeed: 0
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  JumpPower: 27
+  isGrounded: 1
+  cayoteecheck: 49.69998
+  cancayotee: 1
   CoyoteTime: 0.13
+  canbuffer: 1
   JumpBuffer: 0.2
+  DashDuration: 0
+  CanDash: 0
+  DashCooldown: 0
+  WallJumpMask: 0
+  DashMask: 0
+  IfarmeMask: 0
+  DoubleHitMask: 0
+  StrengthMask: 0
+  UltMask: 0
